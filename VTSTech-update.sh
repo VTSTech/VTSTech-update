@@ -4,11 +4,11 @@
 # Operating System: Kali Linux
 # Description: Debian Updater
 # Author: VTSTech
-# https://github.com/Veritas83
+# https://github.com/VTSTech
 # Dependencies: apt
 echo '[**************************************************************]'
 echo '[* Running Kali Linux Updater by VTSTech (www.VTS-Tech.org)...*]'
-echo '[******************************************v0.2*11-06-2022*****]'
+echo '[******************************************v0.2*04-19-2024*****]'
 if [[ -z $1 ]];
 then 
 		echo '[* Usage:]'

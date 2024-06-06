@@ -1,6 +1,6 @@
 <pre>
 Program: VTSTech-update.sh
-Version: 0.0.2
+Version: 0.3
 Operating System: Kali Linux
 Description: Debian Updater
 Author: VTSTech

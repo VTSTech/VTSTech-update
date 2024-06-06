@@ -1,6 +1,6 @@
 #!/bin/bash
 # Program: VTSTech-update.sh
-# Version: 0.0.2
+# Version: 0.03
 # Operating System: Kali Linux
 # Description: Debian Updater
 # Author: VTSTech
@@ -8,14 +8,15 @@
 # Dependencies: apt
 echo '[**************************************************************]'
 echo '[* Running Kali Linux Updater by VTSTech (www.VTS-Tech.org)...*]'
-echo '[******************************************v0.2*04-19-2024*****]'
+echo '[******************************************v0.3*06-06-2024*****]'
 if [[ -z $1 ]];
 then 
 		echo '[* Usage:]'
 		echo '[* -d apt-get dist-upgrade]'
+		echo '[* -f apt-get full-upgrade]'
 		echo '[* -r sudo reboot]'		
 fi
-sudo apt-get update && sudo apt-get upgrade -y
+sudo apt-get update -y
 if [[ -z $1 ]];
 then 
 		a=a;
@@ -29,8 +30,16 @@ else
 	        		echo '[****************************]'
 	        		sudo apt-get dist-upgrade -y
 	        	fi
+	        	if [ $i == "-f" ]
+	        	then
+	        		echo '[****************************]'
+	        		echo '[* Running Full Upgrade...  *]'
+	        		echo '[****************************]'
+	        		sudo apt-get full-upgrade -y
+	        	fi	        	
 		done
 fi
+ sudo apt upgrade -y
 echo '[*****************]'
 echo '[* Cleaning up...*]'
 echo '[*****************]'
